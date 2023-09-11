@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeProvider";
+import React, { useContext } from 'react';
+import { ThemeContext } from './ThemeProvider';
+
 
 const ThemeToggleButton = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
-  return (
-    <button
-      id="global-theme-toggler"
-      className={`btn-${theme} txt-${theme}`}
-      onClick={toggleTheme}
-    >{`Swicth to ${theme == "light" ? "dark" : "light"} theme`}</button>
-  );
-};
-export { ThemeToggleButton };
+    return (
+        <button onClick={toggleTheme} className={`btn btn-${theme} txt-${theme}`} id='global-theme-toggler'>
+            Switch to {theme === 'dark' ? 'light' : 'dark'} theme
+        </button>
+    )
+
+}
+export { ThemeToggleButton }
